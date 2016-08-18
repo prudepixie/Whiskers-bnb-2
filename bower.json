@@ -1,0 +1,24 @@
+{
+  "name": "whiskers-bnb-2",
+  "homepage": "https://github.com/prudepixie/whiskers-bnb-2",
+  "authors": [
+    "prudepixie <wndyhsu@gmail.com>"
+  ],
+  "description": "pet sitting service written in ruby on rails and angular",
+  "main": "",
+  "keywords": [
+    "cat",
+    "pet",
+    "sitting",
+    "daycare",
+    "bnb"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
