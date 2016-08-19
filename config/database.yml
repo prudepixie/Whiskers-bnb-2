@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: whiskers-bnb-2_production
-  username: whiskers-bnb-2
-  password: <%= ENV['WHISKERS-BNB-2_DATABASE_PASSWORD'] %>
