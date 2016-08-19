@@ -1,6 +1,7 @@
 receta = angular.module('receta', [
   'templates',
   'ngRoute',
+  'ngResource'
   'controllers',
 ])
 
@@ -10,37 +11,10 @@ receta.config([ '$routeProvider',
       .when('/',
         templateUrl: "index.html",
         controller: 'HostsController'
+      ).when('/hosts/:hostId',
+        templateUrl: "show.html",
+        controller: 'HostController'
       )
 ])
 
-hosts = [
-  {
-    id: 1
-    name: 'Wendy Hsu'
-  },
-  {
-    id: 2
-    name: 'Monster Cat',
-  },
-  {
-    id: 3
-    name: 'Emma Cat',
-  },
-  {
-    id: 4
-    name: 'Chris Palmer',
-  }
-]
-
-console.log(hosts);
 controllers = angular.module('controllers', [])
-controllers.controller("HostsController", [ '$scope', '$routeParams' , '$location',
-  ($scope, $routeParams, $location)->
-    $scope.search = (keywords)-> $location.path("/").search('keywords',keywords)
-
-    if $routeParams.keywords
-      keywords = $routeParams.keywords.toLowerCase()
-      $scope.hosts = hosts.filter (host)-> host.name.toLowerCase().indexOf(keywords) != -1
-    else
-      $scope.hosts = []
-])

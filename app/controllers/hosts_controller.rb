@@ -4,7 +4,11 @@ class HostsController < ApplicationController
   # GET /hosts
   # GET /hosts.json
   def index
-    @hosts = Host.all
+    @hosts = if params[:keywords]
+      Host.where('first_name ilike ?' , "%#{params[:keywords]}%")
+    else
+      []
+    end
   end
 
   # GET /hosts/1
