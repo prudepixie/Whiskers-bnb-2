@@ -6,7 +6,7 @@ class HostsController < ApplicationController
   # GET /hosts.json
   def index
     @hosts = if params[:keywords]
-      Host.where('first_name ilike ?' , "%#{params[:keywords]}%")
+      Host.where('city ilike ?' , "%#{params[:keywords]}%")
     else
       []
     end
@@ -32,7 +32,7 @@ class HostsController < ApplicationController
   def create
     @host = Host.new(host_params)
     @host.save
-    
+
     render 'show', status: 201
     # respond_to do |format|
     #   if @host.save

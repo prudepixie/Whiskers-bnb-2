@@ -16,6 +16,13 @@ controllers.controller("HostsController", [ '$scope', '$routeParams' , '$locatio
 
     $scope.view = (hostId)-> $location.path("/hosts/#{hostId}")
     $scope.newHost =()-> $location.path("/hosts/new")
+
+    $scope.cancel = ->
+      if $scope.host.id
+        $location.path("/hosts/#{$scope.host.id }")
+      else
+        $location.path("/")
+
     onError = (_httpResponse)-> flash.error = "Something went wrong"
     $scope.save = ->
       Host.create($scope.host,
