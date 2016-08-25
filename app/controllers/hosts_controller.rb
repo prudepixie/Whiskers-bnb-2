@@ -31,15 +31,19 @@ class HostsController < ApplicationController
   # POST /hosts.json
   def create
     @host = Host.new(host_params)
-    @host.save
 
-    render 'show', status: 201
+
+    if @host.save
+      render json: @host, status: 201
+    else
+      render json: @host.errors, status: 400
+    end
     # respond_to do |format|
     #   if @host.save
-    #     format.html { redirect_to @host, notice: 'Host was successfully created.' }
+    #     # format.html { redirect_to @host, notice: 'Host was successfully created.' }
     #     format.json { render :show, status: :created, location: @host }
     #   else
-    #     format.html { render :new }
+    #     # format.html { render :new }
     #     format.json { render json: @host.errors, status: :unprocessable_entity }
     #   end
     # end

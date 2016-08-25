@@ -4,7 +4,9 @@ receta = angular.module('receta', [
   'ngResource'
   'controllers',
   'angular-flash.service',
-  'angular-flash.flash-alert-directive'
+  'angular-flash.flash-alert-directive',
+  'ipCookie',
+  'ng-token-auth'
 ])
 
 receta.config([ '$routeProvider', 'flashProvider',
@@ -24,6 +26,9 @@ receta.config([ '$routeProvider', 'flashProvider',
       ).when('/hosts/:hostId',
         templateUrl: "show.html",
         controller: 'HostController'
+      ).when('/sign_in',
+        templateUrl: "views/user_sessions/new.html",
+        controller: 'UserSessionsController'
       )
 ])
 

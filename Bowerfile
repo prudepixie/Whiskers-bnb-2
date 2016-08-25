@@ -3,4 +3,6 @@ asset 'angular-route'
 asset 'angular-resource'
 asset 'bootstrap-sass-official'
 asset 'angular-flash'
+asset 'angular-cookie'
+asset 'ng-token-auth'
 # vim: ft=ruby
