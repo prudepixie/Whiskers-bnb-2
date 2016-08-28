@@ -190,6 +190,7 @@ DEPENDENCIES
   bower-rails
   byebug
   coffee-rails (~> 4.2)
+  devise
   devise_token_auth
   foreman
   jbuilder (~> 2.5)

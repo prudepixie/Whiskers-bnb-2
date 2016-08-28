@@ -5,6 +5,23 @@
     "angular-route": "latest",
     "angular-resource": "latest",
     "bootstrap-sass-official": "latest",
-    "angular-flash": "latest"
+    "angular-flash": "latest",
+    "angular-cookie": "latest",
+    "ng-token-auth": "latest",
+    "font-awesome": "latest",
+    "themify-icons": "latest",
+    "flag-icon-css": "latest",
+    "animate.css": "latest",
+    "bootstrap": "latest",
+    "bootstrap-jasny": "latest",
+    "components-modernizr": "latest",
+    "js-cookie": "latest",
+    "perfect-scrollbar": "latest",
+    "switchery": "latest",
+    "jquery.knobe": "latest",
+    "seiyria-bootstrap-slider": "latest",
+    "slick": "latest",
+    "jquery-numerator": "latest",
+    "ladda": "latest"
   }
 }

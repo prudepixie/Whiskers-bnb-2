@@ -4,8 +4,7 @@ controllers.controller("HostsController", [ '$scope', '$routeParams' , '$locatio
     $scope.search = (keywords)-> $location.path("/").search('keywords',keywords)
     Host = $resource('/hosts/:hostId', { hostId: "@id", format: 'json' },
       {
-        'save': {method: 'PUT'},
-        'create': {method: 'POST'}
+        'create': {method: 'POST'},
       }
     )
 
@@ -16,12 +15,11 @@ controllers.controller("HostsController", [ '$scope', '$routeParams' , '$locatio
 
     $scope.view = (hostId)-> $location.path("/hosts/#{hostId}")
     $scope.newHost =()-> $location.path("/hosts/new")
-    $scope.signIn =()-> $location.path("/sign_in")
 
     $scope.cancel = ->
-      if $scope.host.id
-        $location.path("/hosts/#{$scope.host.id }")
-      else
+      # if $scope.host.id
+      #   $location.path("/hosts/#{$scope.host.id }")
+      # else
         $location.path("/")
 
     onError = (_httpResponse)-> flash.error = "Something went wrong"

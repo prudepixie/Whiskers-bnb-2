@@ -2,6 +2,12 @@
   <button type="button" name="button">Become a Host</button>
 <% end %> -->
 
+<% if current_user %>
+  <%= link_to 'Sign Out', destroy_user_session_path, method: 'delete' %>
+<% else %>
+  <%= link_to 'Sign In ', new_user_session_path %>
+<% end %>
+
 <div ng-app="receta">
   <div class="view-container">
     <div ng-view class="view-frame animate-view">

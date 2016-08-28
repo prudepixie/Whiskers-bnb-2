@@ -1,0 +1,74 @@
+body {
+  background: white;
+}
+
+.panel-white {
+  background-color: #f7f7f7;
+  border: none;
+}
+
+.lyt-2 #sidebar .sidebar-container {
+  background-color: white!important;
+  box-shadow: none;
+}
+
+.main-content,
+.navbar .navbar-header,
+.navbar .navbar-collapse {
+  background: white!important;
+}
+
+#sidebar > div nav > ul > li.open, #sidebar > div nav > ul > li:hover {
+  background: rgba(95, 121, 171, 0.73) !important;
+}
+
+#sidebar > div nav > ul > li a {
+  color: #4a5567;
+}
+
+.lyt-2 #sidebar > div nav > ul > li .item-inner {
+  font-size: 13px;
+}
+
+#sidebar > div nav > ul > li a i  {
+  font-size: 18px;
+}
+
+.navbar .navbar-header .navbar-brand {
+  top: 8px;
+}
+
+.white-background {
+  background-color: white;
+}
+
+.grey-border {
+  border: 1px solid #F0F3F4 !important;
+}
+
+form .field {
+  margin-bottom: 8px;
+}
+
+ul.sub-menu li.active, ul.sub-menu li.active:hover {
+  background: rgba(204, 211, 216, 0.75) !important
+}
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.clip-radio input[type="radio"] {
+  position: absolute;
+}
+
+.breadcrumb-wrapper {
+  margin: 15px -15px;
+}
+
+#toggle-items {
+  cursor: pointer;
+}

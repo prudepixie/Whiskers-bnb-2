@@ -26,9 +26,6 @@ receta.config([ '$routeProvider', 'flashProvider',
       ).when('/hosts/:hostId',
         templateUrl: "show.html",
         controller: 'HostController'
-      ).when('/sign_in',
-        templateUrl: "views/user_sessions/new.html",
-        controller: 'UserSessionsController'
       )
 ])
 
